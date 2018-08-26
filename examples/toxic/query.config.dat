@@ -18,7 +18,7 @@ p7
 (dp8
 S'sample.db'
 p9
-S'has_toxidrome(a,sympathomimetic), has_toxidrome(a,sedative_hypnotic)'
+S'has_toxidrome'
 p10
 ssS'maxSteps'
 p11
@@ -63,7 +63,7 @@ p26
 I0
 sS'geometry'
 p27
-V757x938+89+27
+V757x938+89+25
 p28
 sS'mln'
 p29

@@ -22,3 +22,11 @@ has_toxidrome(patient,toxidrome)
 3 has_respiratory_rate(patient, bradypneic) => !has_toxidrome(patient,sympathomimetic)
 2 has_respiratory_rate(patient, tachypneic) => has_toxidrome(patient, sympathomimetic)
 
+
+//Rules (in conjunctive normal form, well not yet)
+logx(0.5) has_heart_rate(patient, tachycardic) => has_toxidrome(patient, sympathomimetic)
+0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, serotonin_syndrome)
+0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, anticholinergic)
+
+-0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, sedative_hypnotic)
+-0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, cholinergic)
