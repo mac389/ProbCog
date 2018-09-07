@@ -1,0 +1,17 @@
+// MLN for social networks section in tutorial
+
+Sympathomimetic(person)
+Anticholinergic(person)
+Tachycardic(person)
+Diaphoretic(person)
+Mydriatic(person)
+Dry_skin(person)
+
+// Rules
+//If you have a sympathomimetic toxidrome then you are tachycardic
+log(0.8) Sympathomimetic(x) => Tachycardic(x) 
+log(0.8) Sympathomimetic(x) => Diaphoretic(x)
+log(0.4) Sympathomimetic(x) => Mydriatic(x)
+log(0.3) Sympathomimetic(x) => !Mydriatic(x)
+ 
+log(0.8) Anticholinergic(x) => (Tachycardic(x) ^ Mydriatic(x) ^ Dry_skin(x))
