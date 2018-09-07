@@ -15,18 +15,11 @@ has_respiratory_rate(patient, respiratory_rate)
 has_toxidrome(patient,toxidrome)
 
 //Rules
-1 has_heart_rate(patient, tachycardic) => has_toxidrome(patient,sympathomimetic)
-1 has_heart_rate(patient, bradycardic) => !has_toxidrome(patient, sympathomimetic)
-1 has_heart_rate(patient, bradycardic) => has_toxidrome(patient, sedative_hypnotic)
-3 has_respiratory_rate(patient, bradypneic) => has_toxidrome(patient, sedative_hypnotic)
-3 has_respiratory_rate(patient, bradypneic) => !has_toxidrome(patient,sympathomimetic)
-2 has_respiratory_rate(patient, tachypneic) => has_toxidrome(patient, sympathomimetic)
-
-
-//Rules (in conjunctive normal form, well not yet)
-logx(0.5) has_heart_rate(patient, tachycardic) => has_toxidrome(patient, sympathomimetic)
-0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, serotonin_syndrome)
-0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, anticholinergic)
-
--0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, sedative_hypnotic)
--0.5 has_heart_rate(patient, tachycardic) => has_toxidrome(patient, cholinergic)
+1 has_heart_rate(x, tachycardic) => has_toxidrome(x,sympathomimetic)
+1 has_heart_rate(x, bradycardic) => !has_toxidrome(x, sympathomimetic)
+1 has_heart_rate(x, bradycardic) => has_toxidrome(x, sedative_hypnotic)
+1 has_heart_rate(x, bradycardic) => !has_heart_rate(x, tachycardic)
+1 has_respiratory_rate(x, bradypneic) => !has_respiratory_rate(x, tachypneic)
+3 has_respiratory_rate(x, bradypneic) => has_toxidrome(x, sedative_hypnotic)
+3 has_respiratory_rate(x, bradypneic) => !has_toxidrome(x,sympathomimetic)
+2 has_respiratory_rate(x, tachypneic) => has_toxidrome(x, sympathomimetic)

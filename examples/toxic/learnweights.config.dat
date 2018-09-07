@@ -20,19 +20,19 @@ S'100'
 p9
 sS'geometry'
 p10
-V779x903+242+23
+V779x656+242+23
 p11
-sS'mln'
+sS'db'
 p12
-S'logic.mln'
+S'sample.db'
 p13
 sS'method1'
 p14
 S'pseudo-log-likelihood with blocking'
 p15
-sS'db'
+sS'mln'
 p16
-S'sample.db'
+S'logic.mln'
 p17
 sS'output_filename'
 p18
