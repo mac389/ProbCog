@@ -7,7 +7,7 @@ respiratory_depth = {hypopneic, normal_depth, hyperpneic}
 moisture_of_skin = {dry, normal, diaphoretic}
 reflex_strength = {hyporeflexic, normoreflexic, hyperreflexic}
 clonus = {absent, present}
-patient = {a,b,c} //Really need to think how to name patients
+patient = {a} //Really need to think how to name patients
 
 //predicate declarations
 has_heart_rate(patient, heart_rate)
