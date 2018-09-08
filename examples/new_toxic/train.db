@@ -3,6 +3,12 @@ Tachycardic(Anna)
 Mydriatic(Anna)
 Sympathomimetic(Anna)
 
+Diaphoretic(Bob)
+Tachycardic(Bob)
+!Mydriatic(Bob)
+Sympathomimetic(Bob)
+
+
 Tachycardic(Edward)
 Mydriatic(Edward)
 Dry_skin(Edward)
