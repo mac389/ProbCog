@@ -8,7 +8,7 @@ Sedative_hypnotic(person)
 
 //Signs
 Tachycardic(person)
-Bardycardic(person)
+Bradycardic(person)
 Eucardic(person)
 
 Diaphoretic(person)
@@ -80,3 +80,4 @@ log(0.8) Cholinergic(x) => Increased_bowel_sounds(x)
 0 Bradycardic(x) => !Tachycardic(x)
 0 Tachypneic(x) => !Bradypneic(x)
 0 Tachypneic(x) => !Eupneic(x)
+
